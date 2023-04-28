@@ -38,6 +38,7 @@ namespace GestoreEventi
             return eventiInData;
         }
 
+        //Metodo Statico
         public static string GetStringaListaEventi(List<Evento> listaDaStampare)
         {
             string eventi = "";
@@ -59,6 +60,7 @@ namespace GestoreEventi
             this.eventi.Clear();
         }
 
-        
+
+
     }
 }
