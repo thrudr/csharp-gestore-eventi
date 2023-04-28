@@ -10,5 +10,14 @@ namespace GestoreEventi
     {
         private string titolo;
         private List<Evento> eventi;
+
+        //COSTRUTTORE
+        public ProgrammaEventi(string titolo)
+        {
+            this.titolo = titolo;
+            this.eventi = new List<Evento>();
+        }
+
+
     }
 }
