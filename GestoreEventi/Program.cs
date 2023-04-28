@@ -57,17 +57,24 @@ Console.WriteLine("Quanti eventi verrano inseriti?");
 
 while (numeroEventi != programma.EventiTotali())
 {
-    Console.WriteLine("Inserisci il nome dell'evento:");
+    try
+    {
+        Console.WriteLine("Inserisci il nome dell'evento:");
         string titoloUtente = Console.ReadLine();
 
-    Console.WriteLine("Inserisci la data dell'evento (MM/dd/yyyy):");
+        Console.WriteLine("Inserisci la data dell'evento (MM/dd/yyyy):");
         string dataUtente = Console.ReadLine();
 
-    Console.WriteLine("Inserisci il numero di posti totali:");
+        Console.WriteLine("Inserisci il numero di posti totali:");
         int postiUtente = int.Parse(Console.ReadLine());
 
-    Evento eventoUtente = new Evento(titoloUtente, dataUtente, postiUtente);
-    programma.AggiungeEvento(eventoUtente);
+        Evento eventoUtente = new Evento(titoloUtente, dataUtente, postiUtente);
+        programma.AggiungeEvento(eventoUtente);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
 }
 
 Console.WriteLine("\nTotale eventi: " + programma.EventiTotali());
