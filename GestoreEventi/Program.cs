@@ -69,3 +69,14 @@ while (numeroEventi != programma.EventiTotali())
     Evento eventoUtente = new Evento(titoloUtente, dataUtente, postiUtente);
     programma.AggiungeEvento(eventoUtente);
 }
+
+Console.WriteLine("\nTotale eventi: " + programma.EventiTotali());
+
+Console.WriteLine(programma);
+
+Console.WriteLine("Inseriisci una data (MM/dd/yyyy):");
+    string dataInseritaDaUtente = Console.ReadLine();
+
+Console.WriteLine(ProgrammaEventi.GetStringaListaEventi(programma.eventiInData(dataInseritaDaUtente)));
+    programma.SvuotaLista();
+
