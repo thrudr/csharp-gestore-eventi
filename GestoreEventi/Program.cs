@@ -1,6 +1,6 @@
 ﻿
 using GestoreEventi;
-
+/*
 //MILESTONE 2
 Console.WriteLine("Inserisci il nome dell'evento:");
     string nomeEventoUtente = Console.ReadLine();
@@ -43,4 +43,15 @@ while (check == "si")
 
     Console.WriteLine("Vuoi disdire altri posti? (si/no)?");
     check = Console.ReadLine();
-}
+}*/
+
+// MILESTONE 4
+
+Console.WriteLine("Inserisca il nome del programma eventi: ");
+    string nomeProgrammaUtente = Console.ReadLine();
+
+ProgrammaEventi programma = new ProgrammaEventi(nomeProgrammaUtente);
+
+Console.WriteLine("Quanti eventi verrano inseriti?");
+    int numeroEventi = int.Parse(Console.ReadLine());
+
