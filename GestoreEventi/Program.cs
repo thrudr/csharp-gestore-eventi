@@ -55,3 +55,17 @@ ProgrammaEventi programma = new ProgrammaEventi(nomeProgrammaUtente);
 Console.WriteLine("Quanti eventi verrano inseriti?");
     int numeroEventi = int.Parse(Console.ReadLine());
 
+while (numeroEventi != programma.EventiTotali())
+{
+    Console.WriteLine("Inserisci il nome dell'evento:");
+        string titoloUtente = Console.ReadLine();
+
+    Console.WriteLine("Inserisci la data dell'evento (MM/dd/yyyy):");
+        string dataUtente = Console.ReadLine();
+
+    Console.WriteLine("Inserisci il numero di posti totali:");
+        int postiUtente = int.Parse(Console.ReadLine());
+
+    Evento eventoUtente = new Evento(titoloUtente, dataUtente, postiUtente);
+    programma.AggiungeEvento(eventoUtente);
+}
