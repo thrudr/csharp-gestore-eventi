@@ -38,5 +38,27 @@ namespace GestoreEventi
             return eventiInData;
         }
 
+        public static string GetStringaListaEventi(List<Evento> listaDaStampare)
+        {
+            string eventi = "";
+            foreach (Evento evento in listaDaStampare)
+            {
+                eventi += evento.ToString();
+                eventi += "\n";
+            }
+            return eventi;
+        }
+
+        public int EventiTotali()
+        {
+            return this.eventi.Count;
+        }
+
+        public void SvuotaLista()
+        {
+            this.eventi.Clear();
+        }
+
+        
     }
 }
