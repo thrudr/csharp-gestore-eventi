@@ -93,13 +93,18 @@ namespace GestoreEventi
             this.postiPrenotati -= postiDaDisdire;
         }
 
+        public void PostiRimanenti()
+        {
+            int postiRimanenti = maxPosti - postiPrenotati;
+        }
         public override string ToString()
         {
             string dataStringa = this.data.ToString("dd/MM/yyyy");
             return "Titolo: " + this.titolo
                 + "\nData: " + dataStringa
                 + "\nCapienza massima: " + this.maxPosti
-                + "\nPosti prenotati: " + this.postiPrenotati + "\n";
+                + "\nPosti prenotati: " + this.postiPrenotati 
+                + "\nPosti rimasti: " + PostiRimanenti;
         }
 
     }
