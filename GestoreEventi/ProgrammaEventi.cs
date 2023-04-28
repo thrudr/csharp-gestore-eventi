@@ -60,7 +60,13 @@ namespace GestoreEventi
             this.eventi.Clear();
         }
 
-
+        public override string ToString()
+        {
+            return "Nome programma evento: "
+                + this.titolo
+                + "\n\n"
+                + ProgrammaEventi.GetStringaListaEventi(this.eventi);
+        }
 
     }
 }
